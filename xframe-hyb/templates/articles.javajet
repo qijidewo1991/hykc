@@ -1,0 +1,63 @@
+<%@ jet package="com.xframe.templates" class="ArticlesJSP" 
+	imports="org.json.*"
+	startTag="<$"
+	endTag="$>"
+%>
+<$
+	
+	java.util.ArrayList<JSONObject> list=(java.util.ArrayList<JSONObject>)argument;
+$>
+<%@ page contentType="text/html; charset=utf-8"%>
+<!doctype html>
+<html>
+	<head>
+		<title>Articles</title> 
+		<meta charset="utf-8">
+		<META HTTP-EQUIV="Pragma" CONTENT="no-cache"> 
+		<META HTTP-EQUIV="Cache-Control" CONTENT="no-cache"> 
+		<META HTTP-EQUIV="Expires" CONTENT="0"> 
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+		<link id="bs-css2" href="../charisma/css/bootstrap-cerulean.min.css" rel="stylesheet">
+		<link href="../charisma/css/charisma-app.css" rel="stylesheet">
+		<script src="../charisma/bower_components/jquery/jquery.min.js"></script>
+		<link href="list.css?t=3" rel="stylesheet">
+		<script lang="javascript">
+			function showDetail(strTitle,strId){
+				var strurl="/files/content.jsp?rowid="+strId;
+				jsObj.onShowWeb(strurl,strTitle,2);
+			}
+		</script>
+	</head>
+	<body style="background-color:#f1f1f1;">
+		<$
+				try{
+					for(int i=0;i<list.size();i++){
+						JSONObject row=list.get(i);
+						String rowid=row.getString("rowid");
+						String title=row.getString("data:title");
+						String pubTime=row.getString("data:pub_time");
+						String fileDir=row.getString("data:file_dir");
+						String thumb=row.getString("data:thumb");
+						String prefix="../files/";
+						thumb=thumb.substring(thumb.indexOf(prefix)+prefix.length());
+			$>
+		<ul class="list-group">	
+				<div style="text-align:center;margin-top:15px;" class="news-time">
+					<span style="background-color:#999999;color:#ffffff;font-size:12px;padding:3px;"><$=pubTime$></span>
+				</div>
+				
+				<a href="javascript:showDetail('<$=title$>','<$=rowid$>')" class="list-group-item header-item">
+					<div class="news-body">
+						<img src="<$=thumb$>" class="news-img"/>
+						<div class="news-title"><$=title$></div>
+					</div>
+				</a>
+		</ul>	
+			<$			
+					}
+				}catch(Exception ex){
+					ex.printStackTrace();
+				}
+		$>
+	</body>
+</html>	

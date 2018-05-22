@@ -1,0 +1,14 @@
+eclipse.preferences.version=1
+encoding//src/com/alipay/config=UTF-8
+encoding//src/com/alipay/sign/RSA.java=UTF-8
+encoding//src/com/alipay/util=UTF-8
+encoding//src/com/alipay/util/httpClient/HttpProtocolHandler.java=UTF-8
+encoding//src/com/alipay/util/httpClient/HttpRequest.java=UTF-8
+encoding//src/com/alipay/util/httpClient/HttpResponse.java=UTF-8
+encoding//src/com/alipay/util/httpClient/HttpResultType.java=UTF-8
+encoding//src/com/hyb/utils/DataSender.java=UTF-8
+encoding//src/com/swiftpass/action/TestPayResultSerlet.java=UTF-8
+encoding//src/com/swiftpass/action/TestPayServlet.java=UTF-8
+encoding//src/com/zhiyun/utils/ZyApi.java=UTF-8
+encoding//src/config.properties=UTF-8
+encoding//templates/articles.javajet=UTF-8
