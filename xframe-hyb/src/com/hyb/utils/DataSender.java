@@ -68,7 +68,7 @@ public class DataSender {
 			data.put("CountrySubdivisionCode_sh", row.getString("data:to_code"));
 
 			data.put("TotalMonetaryAmount", AppUtil.formatAmountNoGroup(row.getDouble("data:yf"), 3));
-
+ //徐超
 			data.put("LicensePlateTypeCode", driverObj.getString("data:rz#cplx"));
 			data.put("VehicleNumber", driverObj.get("data:rz#cph"));
 			data.put("VehicleClassificationCode", driverObj.getString("data:rz#clfl"));
