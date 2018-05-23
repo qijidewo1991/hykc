@@ -57,6 +57,7 @@ public class DataSender {
 			data.put("OriginalDocumentNumber", row.getString("data:sid"));
 			data.put("ShippingNoteNumber", row.getString("data:sid"));
 			// data.put("Carrier", driverObj.getString("data:rz#xm"));
+			//测试git
 			data.put("Carrier", "河南省脱颖实业有限公司");
 			data.put("ConsignmentDateTime", row.getString("data:yd_1_time"));
 			data.put("BusinessTypeCode", row.getString("data:business"));
