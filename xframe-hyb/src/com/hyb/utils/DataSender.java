@@ -60,8 +60,8 @@ public class DataSender {
 			data.put("Carrier", "河南省脱颖实业有限公司");
 			data.put("ConsignmentDateTime", row.getString("data:yd_1_time"));
 			data.put("BusinessTypeCode", row.getString("data:business"));
-			data.put("DespatchActualDateTime", row.getString("data:yd_2_time"));
-			data.put("GoodsReceiptDateTime", row.getString("data:yd_3_time"));
+			data.put("DespatchActualDateTime", row.getString("data:yd_1_time"));
+			data.put("GoodsReceiptDateTime", row.getString("data:yd_2_time"));
 
 			data.put("CountrySubdivisionCode_fh", row.getString("data:from_code"));
 			data.put("CountrySubdivisionCode_sh", row.getString("data:to_code"));
